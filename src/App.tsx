@@ -12,6 +12,19 @@ import { ExtraCurricular } from './pages/ExtraCurricular';
 import { Admissions } from './pages/Admissions';
 import { Contact } from './pages/Contact';
 
+// Admin imports
+import { AdminLogin } from './admin/AdminLogin';
+import { AdminLayout } from './admin/AdminLayout';
+import { AdminDashboard } from './admin/Dashboard';
+import { ProtectedRoute } from './admin/ProtectedRoute';
+import { NewsEditor } from './admin/editors/NewsEditor';
+import { AboutEditor } from './admin/editors/AboutEditor';
+import { AchievementsEditor } from './admin/editors/AchievementsEditor';
+import { DocumentsEditor } from './admin/editors/DocumentsEditor';
+import { ExtraCurricularEditor } from './admin/editors/ExtraCurricularEditor';
+import { ApplicationsEditor } from './admin/editors/ApplicationsEditor';
+import { ContactEditor } from './admin/editors/ContactEditor';
+
 const HomePage = () => (
   <>
     <Hero />
@@ -23,21 +36,29 @@ const HomePage = () => (
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/documents" element={<Documents />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/extra-curricular" element={<ExtraCurricular />} />
-            <Route path="/admissions" element={<Admissions />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Public routes */}
+        <Route path="/" element={<><Navbar /><main className="flex-grow"><HomePage /></main><Footer /></>} />
+        <Route path="/about" element={<><Navbar /><main className="flex-grow"><About /></main><Footer /></>} />
+        <Route path="/documents" element={<><Navbar /><main className="flex-grow"><Documents /></main><Footer /></>} />
+        <Route path="/achievements" element={<><Navbar /><main className="flex-grow"><Achievements /></main><Footer /></>} />
+        <Route path="/extra-curricular" element={<><Navbar /><main className="flex-grow"><ExtraCurricular /></main><Footer /></>} />
+        <Route path="/admissions" element={<><Navbar /><main className="flex-grow"><Admissions /></main><Footer /></>} />
+        <Route path="/contact" element={<><Navbar /><main className="flex-grow"><Contact /></main><Footer /></>} />
+
+        {/* Admin routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="news" element={<NewsEditor />} />
+          <Route path="about" element={<AboutEditor />} />
+          <Route path="achievements" element={<AchievementsEditor />} />
+          <Route path="documents" element={<DocumentsEditor />} />
+          <Route path="extra-curricular" element={<ExtraCurricularEditor />} />
+          <Route path="applications" element={<ApplicationsEditor />} />
+          <Route path="contact" element={<ContactEditor />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
