@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 
 export const Footer = () => {
@@ -58,7 +59,7 @@ export const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 text-center text-green-200 text-sm">
           <p>© {new Date().getFullYear()} Nyanga High School. All Rights Reserved. | Hitch Your Wagon To The Stars</p>
-          <a href="/admin/login" className="text-green-200/30 hover:text-green-200/60 text-xs mt-2 inline-block transition-colors">Staff Portal</a>
+          <Link to="/admin/login" className="text-green-200/30 hover:text-green-200/60 text-xs mt-2 inline-block transition-colors">Staff Portal</Link>
         </div>
       </div>
     </footer>

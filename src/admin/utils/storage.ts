@@ -200,7 +200,9 @@ const defaultHall: HallOfFameEntry[] = [
   { id: '2', name: 'Top Achiever 2', title: '6 Distinctions', year: '2025', desc: '', image: '/Achievements/HALL%20OF%20FAME/2025/achievers%203.jpg' },
   { id: '3', name: 'Top Achiever 3', title: 'Top in Math', year: '2025', desc: '', image: '/Achievements/HALL%20OF%20FAME/2025/achievers%204.jpg' },
   { id: '4', name: 'Top Achiever 2024', title: 'Overall Best', year: '2024', desc: '', image: '/Achievements/HALL%20OF%20FAME/2024/1.jpg' },
-  { id: '5', name: 'Top Achiever 2023', title: '7 Distinctions', year: '2023', desc: '', image: '/Achievements/HALL%20OF%20FAME/2023/1.jpg' }
+  { id: '5', name: 'Top Achiever 1 (2023)', title: '7 Distinctions', year: '2023', desc: '', image: '/Achievements/HALL%20OF%20FAME/2023/1.jpg' },
+  { id: '6', name: 'Top Achiever 2 (2023)', title: 'Top in Physics', year: '2023', desc: '', image: '/Achievements/HALL%20OF%20FAME/2023/2.jpg' },
+  { id: '7', name: 'Top Achiever 3 (2023)', title: 'Top in English', year: '2023', desc: '', image: '/Achievements/HALL%20OF%20FAME/2023/3.jpg' }
 ];
 export const getHallOfFame = () => getItems<HallOfFameEntry>('admin_hall_of_fame').length ? getItems<HallOfFameEntry>('admin_hall_of_fame') : defaultHall;
 export const setHallOfFame = (items: HallOfFameEntry[]) => setItems('admin_hall_of_fame', items);
