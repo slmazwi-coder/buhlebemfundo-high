@@ -34,7 +34,7 @@ export const About = () => {
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
             <img 
-              src="/About/Hero 1.jpg" 
+              src="/About/Hero%201.jpg" 
               alt="School Campus" 
               className="w-full h-full object-cover"
             />
@@ -50,7 +50,7 @@ export const About = () => {
             <div className="col-span-1">
               <div className="aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-lg">
                 <img 
-                  src="/About/Principal 1.JPG" 
+                  src="/About/Principal%201.JPG" 
                   alt="Principal" 
                   className="w-full h-full object-cover object-top"
                 />

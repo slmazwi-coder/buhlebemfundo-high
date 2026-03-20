@@ -65,6 +65,20 @@ const resultsData = {
       { subject: "Mathematics", rate: 65.0 },
       { subject: "Physical Sciences", rate: 75.5 },
     ]
+  },
+  "2019": {
+    overall: 95.4,
+    bachelor: 185,
+    bachelorRate: 75.0,
+    distinctions: 380,
+    wrote: 245,
+    subjects: [
+      { subject: "English FAL", rate: 100 },
+      { subject: "Mathematics", rate: 82.5 },
+      { subject: "Physical Sciences", rate: 88.0 },
+      { subject: "IsiXhosa HL", rate: 100 },
+      { subject: "History", rate: 99.0 },
+    ]
   }
 } as const;
 
@@ -78,17 +92,17 @@ const bestEverStudents = [
 
 const topAchieversByYear: Record<string, {name: string, achievement: string, image: string}[]> = {
   "2025": [
-    { name: "Top Achiever 1", achievement: "7 Distinctions", image: "/Achievements/HALL OF FAME/2025/Achievers 5.jpg" },
-    { name: "Top Achiever 2", achievement: "6 Distinctions", image: "/Achievements/HALL OF FAME/2025/achievers 3.jpg" },
-    { name: "Top Achiever 3", achievement: "Top in Math", image: "/Achievements/HALL OF FAME/2025/achievers 4.jpg" },
+    { name: "Top Achiever 1", achievement: "7 Distinctions", image: "/Achievements/HALL%20OF%20FAME/2025/Achievers%205.jpg" },
+    { name: "Top Achiever 2", achievement: "6 Distinctions", image: "/Achievements/HALL%20OF%20FAME/2025/achievers%203.jpg" },
+    { name: "Top Achiever 3", achievement: "Top in Math", image: "/Achievements/HALL%20OF%20FAME/2025/achievers%204.jpg" },
   ],
   "2024": [
-    { name: "Top Achiever 1", achievement: "Overall Best", image: "/Achievements/HALL OF FAME/2024/1.jpg" },
+    { name: "Top Achiever 1", achievement: "Overall Best", image: "/Achievements/HALL%20OF%20FAME/2024/1.jpg" },
   ],
   "2023": [
-    { name: "Top Achiever 1", achievement: "7 Distinctions", image: "/Achievements/HALL OF FAME/2023/1.jpg" },
-    { name: "Top Achiever 2", achievement: "Top in Physics", image: "/Achievements/HALL OF FAME/2023/2.jpg" },
-    { name: "Top Achiever 3", achievement: "Top in English", image: "/Achievements/HALL OF FAME/2023/3.jpg" },
+    { name: "Top Achiever 1", achievement: "7 Distinctions", image: "/Achievements/HALL%20OF%20FAME/2023/1.jpg" },
+    { name: "Top Achiever 2", achievement: "Top in Physics", image: "/Achievements/HALL%20OF%20FAME/2023/2.jpg" },
+    { name: "Top Achiever 3", achievement: "Top in English", image: "/Achievements/HALL%20OF%20FAME/2023/3.jpg" },
   ],
 };
 
@@ -100,7 +114,7 @@ for (let year = 2015; year <= 2022; year++) {
 }
 
 export const Achievements = () => {
-  const [activeResultsYear, setActiveResultsYear] = useState<"2025"|"2024"|"2023">("2025");
+  const [activeResultsYear, setActiveResultsYear] = useState<"2025"|"2024"|"2023"|"2019">("2025");
   const [activeAchieversYear, setActiveAchieversYear] = useState<string>("2025");
 
   const yearsList = Object.keys(topAchieversByYear).sort((a,b) => parseInt(b) - parseInt(a));
@@ -156,14 +170,14 @@ export const Achievements = () => {
             <h2 className="text-3xl font-bold text-school-green flex items-center gap-3">
               <BarChart3 className="text-school-green" /> Matric Results Overview
             </h2>
-            <div className="flex gap-2 mt-4 md:mt-0 bg-gray-100 p-1 rounded-xl">
-              {(["2025", "2024", "2023"] as const).map(year => (
+            <div className="flex gap-2 mt-4 md:mt-0 bg-gray-100 p-1 rounded-xl flex-wrap justify-center">
+              {(["2025", "2024", "2023", "2019"] as const).map(year => (
                 <button
                   key={year}
                   onClick={() => setActiveResultsYear(year)}
                   className={`px-6 py-2 rounded-lg font-bold transition-all ${activeResultsYear === year ? 'bg-school-green text-white shadow-md' : 'text-gray-600 hover:bg-gray-200'}`}
                 >
-                  {year}
+                  {year === "2019" ? "2019 (Historic)" : year}
                 </button>
               ))}
             </div>
