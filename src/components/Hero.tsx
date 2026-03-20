@@ -68,7 +68,7 @@ export const Hero = () => {
           <img
             src={slides[currentIndex].url}
             alt={slides[currentIndex].caption}
-            className="h-full w-full object-cover opacity-50"
+            className="h-full w-full object-contain object-center opacity-50"
           />
           <div className="absolute bottom-20 left-0 right-0 text-center z-20">
             <motion.p 
