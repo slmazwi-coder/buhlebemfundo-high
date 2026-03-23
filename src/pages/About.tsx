@@ -12,7 +12,7 @@ export const About = () => {
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="section-title">About Nyanga High School</h1>
+        <h1 className="section-title">About [SCHOOL NAME]</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <motion.div
@@ -34,7 +34,7 @@ export const About = () => {
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
             <img 
-              src="/About/Hero%201.jpg" 
+              src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2070&auto=format&fit=crop" 
               alt="School Campus" 
               className="w-full h-full object-cover"
             />
@@ -50,7 +50,7 @@ export const About = () => {
             <div className="col-span-1">
               <div className="aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-lg">
                 <img 
-                  src="/About/Principal%201.JPG" 
+                  src="https://images.unsplash.com/photo-1554126807-6b10f6f6692a?q=80&w=2000&auto=format&fit=crop" 
                   alt="Principal" 
                   className="w-full h-full object-cover object-top"
                 />

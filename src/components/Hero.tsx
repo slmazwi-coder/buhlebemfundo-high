@@ -4,40 +4,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    url: "/Hero/Hero%201.jpg",
-    caption: "Excellence in Education Since 1990"
+    url: "/Hero/Hero 1.jpg",
+    caption: "Excellence in Education"
   },
   {
-    url: "/Hero/Achievers%205.jpg",
-    caption: "Celebrating Our Triumphs"
-  },
-  {
-    url: "/Hero/Chris%20Hani%20District%20Top%20Achievers.jpg",
-    caption: "District Top Achievers"
-  },
-  {
-    url: "/Hero/Matric%20prayer.jpg",
-    caption: "A Tradition of Success"
-  },
-  {
-    url: "/Hero/Spelling%20bee%20achievers.jpg",
-    caption: "Nurturing Future Leaders"
-  },
-  {
-    url: "/Hero/Top%20achievrs%202.jpg",
-    caption: "Dedicated to Excellence"
-  },
-  {
-    url: "/Hero/achievers%203.jpg",
+    url: "/Hero/Hero 2.jpg",
     caption: "Empowering Students"
   },
   {
-    url: "/Hero/achievers%204.jpg",
-    caption: "Building Brighter Futures"
+    url: "/Hero/Hero3.jpg",
+    caption: "Nurturing Future Leaders"
   },
   {
-    url: "/Hero/prayer%202.jpg",
-    caption: "Guided by Faith and Knowledge"
+    url: "/Hero/Hero 4.jpg",
+    caption: "Building Brighter Futures"
   },
 ];
 
@@ -55,7 +35,7 @@ export const Hero = () => {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative h-[650px] w-full overflow-hidden bg-school-green">
+    <div className="relative h-[650px] w-full overflow-hidden bg-school-primary">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -87,9 +67,9 @@ export const Hero = () => {
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-5xl md:text-7xl font-bold mb-4"
+          className="text-5xl md:text-7xl font-bold mb-4 uppercase"
         >
-          NYANGA HIGH SCHOOL
+          BUHLEBEMFUNDO
         </motion.h1>
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
@@ -97,7 +77,7 @@ export const Hero = () => {
           transition={{ delay: 0.2 }}
           className="text-xl md:text-2xl font-light italic"
         >
-          "Hitch Your Wagon To The Stars"
+          "KNOWLEDGE IS POWER"
         </motion.p>
         <motion.div 
           initial={{ y: 20, opacity: 0 }}
@@ -105,7 +85,7 @@ export const Hero = () => {
           transition={{ delay: 0.4 }}
           className="mt-8 flex gap-4"
         >
-          <button className="btn-primary bg-white text-school-green hover:bg-gray-100">
+          <button className="btn-primary bg-white text-school-primary hover:bg-gray-100">
             Admissions 2026
           </button>
           <button className="btn-primary border-2 border-white bg-transparent hover:bg-white/10">

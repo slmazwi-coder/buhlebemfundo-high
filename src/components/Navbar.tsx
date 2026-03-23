@@ -23,10 +23,12 @@ export const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3">
-              <img src="/Logo/Badge.jpg" alt="Nyanga High School Badge" className="h-12 w-12 rounded-xl object-cover shadow-lg" />
+              <div className="h-12 w-12 rounded-xl bg-school-primary/10 flex items-center justify-center border border-school-primary/20 shadow-lg font-bold text-school-primary text-xl">
+                B
+              </div>
               <div className="hidden md:block">
-                <span className="text-xl font-bold text-school-green block leading-none">NYANGA</span>
-                <span className="text-sm font-semibold text-gray-500">HIGH SCHOOL</span>
+                <span className="text-xl font-bold text-school-primary block leading-none">BUHLEBEMFUNDO</span>
+                <span className="text-sm font-semibold text-gray-500">SECONDARY SCHOOL</span>
               </div>
             </Link>
           </div>
@@ -40,8 +42,8 @@ export const Navbar = () => {
                 className={cn(
                   "px-3 py-2 rounded-md text-sm font-medium transition-colors",
                   location.pathname === link.path
-                    ? "text-school-green bg-green-50"
-                    : "text-gray-600 hover:text-school-green hover:bg-gray-50"
+                    ? "text-school-primary bg-green-50"
+                    : "text-gray-600 hover:text-school-primary hover:bg-gray-50"
                 )}
               >
                 {link.name}
@@ -53,7 +55,7 @@ export const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-school-green p-2"
+              className="text-gray-600 hover:text-school-primary p-2"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -73,8 +75,8 @@ export const Navbar = () => {
                 className={cn(
                   "block px-3 py-2 rounded-md text-base font-medium",
                   location.pathname === link.path
-                    ? "text-school-green bg-green-50"
-                    : "text-gray-600 hover:text-school-green hover:bg-gray-50"
+                    ? "text-school-primary bg-green-50"
+                    : "text-gray-600 hover:text-school-primary hover:bg-gray-50"
                 )}
               >
                 {link.name}

@@ -114,7 +114,7 @@ export const ExtraCurricular = () => {
         <h1 className="section-title text-center">Sports & Culture</h1>
         
         <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-          At Nyanga High School, we believe in a holistic education. Our extra-curricular programs are designed to discover and nurture the diverse talents of our learners.
+          At [SCHOOL NAME], we believe in a holistic education. Our extra-curricular programs are designed to discover and nurture the diverse talents of our learners.
         </p>
 
         {/* Sports */}
@@ -178,28 +178,28 @@ export const ExtraCurricular = () => {
             </h2>
             <div className="bg-school-green rounded-3xl p-8 text-white">
               <p className="text-lg italic mb-8 text-green-100">
-                "Recognizing those who have gone above and beyond in representing Nyanga High School at regional, provincial, and national levels."
+                "Recognizing those who have gone above and beyond in representing [SCHOOL NAME] at regional, provincial, and national levels."
               </p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">1</div>
                   <div>
-                    <p className="font-bold">L. Ndlovu</p>
-                    <p className="text-sm text-green-100">National Rugby U18 Representative (2024)</p>
+                    <p className="font-bold">[NAME]</p>
+                    <p className="text-sm text-green-100">National Rugby U18 Representative</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">2</div>
                   <div>
-                    <p className="font-bold">S. Mbeki</p>
-                    <p className="text-sm text-green-100">Provincial Choir Soloist Winner (2023)</p>
+                    <p className="font-bold">[NAME]</p>
+                    <p className="text-sm text-green-100">Provincial Choir Soloist Winner</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">3</div>
                   <div>
-                    <p className="font-bold">M. Dlamini</p>
-                    <p className="text-sm text-green-100">National Spelling Bee Finalist (2025)</p>
+                    <p className="font-bold">[NAME]</p>
+                    <p className="text-sm text-green-100">National Spelling Bee Finalist</p>
                   </div>
                 </div>
               </div>
