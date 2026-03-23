@@ -68,9 +68,9 @@ const ProgramCard: React.FC<{ prog: any }> = ({ prog }) => (
     whileHover={{ y: -8 }}
     className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group"
   >
-    <div className="aspect-video bg-school-green/10 flex items-center justify-center relative">
-      <prog.icon size={64} className="text-school-green/40" />
-      <div className="absolute inset-0 bg-school-green/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div className="aspect-video bg-school-primary/10 flex items-center justify-center relative">
+      <prog.icon size={64} className="text-school-primary/40" />
+      <div className="absolute inset-0 bg-school-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <prog.icon size={48} className="text-white" />
       </div>
     </div>
@@ -114,13 +114,13 @@ export const ExtraCurricular = () => {
         <h1 className="section-title text-center">Sports & Culture</h1>
         
         <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-          At [SCHOOL NAME], we believe in a holistic education. Our extra-curricular programs are designed to discover and nurture the diverse talents of our learners.
+          At BUHLEBEMFUNDO SECONDARY SCHOOL, we believe in a holistic education. Our extra-curricular programs are designed to discover and nurture the diverse talents of our learners.
         </p>
 
         {/* Sports */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold text-school-green mb-8 flex items-center gap-3">
-            <Dumbbell className="text-school-green" /> Sports
+          <h2 className="text-2xl font-bold text-school-primary mb-8 flex items-center gap-3">
+            <Dumbbell className="text-school-primary" /> Sports
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {sportsPrograms.map((prog, i) => <ProgramCard key={i} prog={prog} />)}
@@ -129,8 +129,8 @@ export const ExtraCurricular = () => {
 
         {/* Academic Extra-Curricular */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold text-school-green mb-8 flex items-center gap-3">
-            <BookOpen className="text-school-green" /> Academic Extra-Curricular
+          <h2 className="text-2xl font-bold text-school-primary mb-8 flex items-center gap-3">
+            <BookOpen className="text-school-primary" /> Academic Extra-Curricular
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {academicPrograms.map((prog, i) => <ProgramCard key={i} prog={prog} />)}
@@ -139,8 +139,8 @@ export const ExtraCurricular = () => {
 
         {/* Arts & Culture */}
         <section className="mb-24">
-          <h2 className="text-2xl font-bold text-school-green mb-8 flex items-center gap-3">
-            <Music className="text-school-green" /> Arts & Culture
+          <h2 className="text-2xl font-bold text-school-primary mb-8 flex items-center gap-3">
+            <Music className="text-school-primary" /> Arts & Culture
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {culturePrograms.map((prog, i) => <ProgramCard key={i} prog={prog} />)}
@@ -150,7 +150,7 @@ export const ExtraCurricular = () => {
         {/* Accolades and Hall of Fame */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <section>
-            <h2 className="text-3xl font-bold text-school-green mb-8 flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-school-primary mb-8 flex items-center gap-3">
               <Trophy className="text-yellow-600" /> Recent Accolades
             </h2>
             <div className="space-y-4">
@@ -173,32 +173,32 @@ export const ExtraCurricular = () => {
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold text-school-green mb-8 flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-school-primary mb-8 flex items-center gap-3">
               <Star className="text-yellow-500" /> Sports Hall of Fame
             </h2>
-            <div className="bg-school-green rounded-3xl p-8 text-white">
-              <p className="text-lg italic mb-8 text-green-100">
-                "Recognizing those who have gone above and beyond in representing [SCHOOL NAME] at regional, provincial, and national levels."
+            <div className="bg-school-primary rounded-3xl p-8 text-white">
+              <p className="text-lg italic mb-8 text-blue-100">
+                "Recognizing those who have gone above and beyond in representing BUHLEBEMFUNDO SECONDARY SCHOOL at regional, provincial, and national levels."
               </p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">1</div>
                   <div>
-                    <p className="font-bold">[NAME]</p>
+                    <p className="font-bold">BSS Achiever</p>
                     <p className="text-sm text-green-100">National Rugby U18 Representative</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">2</div>
                   <div>
-                    <p className="font-bold">[NAME]</p>
+                    <p className="font-bold">BSS Achiever</p>
                     <p className="text-sm text-green-100">Provincial Choir Soloist Winner</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg">3</div>
                   <div>
-                    <p className="font-bold">[NAME]</p>
+                    <p className="font-bold">BSS Achiever</p>
                     <p className="text-sm text-green-100">National Spelling Bee Finalist</p>
                   </div>
                 </div>

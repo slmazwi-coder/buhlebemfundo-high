@@ -1,6 +1,6 @@
 /**
  * Anti-Malicious Defense System (AMD)
- * A lightweight, rule-based AI safety layer for the [SCHOOL NAME] Staff Portal.
+ * A lightweight, rule-based AI safety layer for the BUHLEBEMFUNDO SECONDARY SCHOOL Staff Portal.
  * Scans text and metadata for policy violations, inappropriate content, and context mismatches.
  */
 

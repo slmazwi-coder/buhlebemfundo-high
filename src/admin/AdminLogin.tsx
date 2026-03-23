@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { login } from './utils/storage';
-import { Lock, Eye, EyeOff } from 'lucide-react';
+import { Lock, Eye, EyeOff, ArrowLeft } from 'lucide-react';
 
 export const AdminLogin = () => {
   const [password, setPassword] = useState('');
@@ -22,11 +22,11 @@ export const AdminLogin = () => {
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
       <div className="bg-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-md border border-gray-700">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-school-green rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-school-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg border-4 border-gray-700">
             <Lock className="text-white" size={28} />
           </div>
-          <h1 className="text-2xl font-bold text-white">Staff Portal</h1>
-          <p className="text-gray-400 text-sm mt-1">[SCHOOL NAME] Administration</p>
+          <h1 className="text-2xl font-bold text-white uppercase tracking-tight">Staff Portal</h1>
+          <p className="text-gray-400 text-sm mt-1 font-semibold">BUHLEBEMFUNDO SECONDARY SCHOOL</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -37,7 +37,7 @@ export const AdminLogin = () => {
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => { setPassword(e.target.value); setError(''); }}
-                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-school-green focus:border-transparent"
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-school-primary focus:border-transparent"
                 placeholder="Enter admin password"
                 autoFocus
               />
@@ -57,11 +57,21 @@ export const AdminLogin = () => {
 
           <button
             type="submit"
-            className="w-full bg-school-green text-white py-3 rounded-xl font-bold hover:bg-green-800 transition-colors"
+            className="w-full bg-school-primary text-white py-3 rounded-xl font-bold hover:bg-blue-800 transition-all shadow-lg active:scale-95"
           >
             Sign In
           </button>
         </form>
+
+        <div className="mt-6 pt-6 border-t border-gray-700 text-center">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium group"
+          >
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+            Back to Website
+          </Link>
+        </div>
 
         <p className="text-center text-gray-500 text-xs mt-8">
           Authorized personnel only

@@ -23,8 +23,8 @@ export const Navbar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-xl bg-school-primary/10 flex items-center justify-center border border-school-primary/20 shadow-lg font-bold text-school-primary text-xl">
-                B
+              <div className="h-12 w-12 rounded-xl overflow-hidden flex items-center justify-center border border-school-primary/20 shadow-lg">
+                <img src="/Logo/Badge.jpg" alt="Buhlebemfundo Logo" className="h-full w-full object-contain bg-white" />
               </div>
               <div className="hidden md:block">
                 <span className="text-xl font-bold text-school-primary block leading-none">BUHLEBEMFUNDO</span>

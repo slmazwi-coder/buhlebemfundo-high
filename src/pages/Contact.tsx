@@ -61,18 +61,17 @@ export const Contact = () => {
             </div>
 
             {/* Mock Map */}
-            <div className="mt-12 rounded-3xl overflow-hidden h-[300px] border-4 border-gray-100 shadow-inner bg-gray-200 relative">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500 flex-col gap-2">
-                <MapPin size={48} className="text-school-primary" />
-                <p className="font-bold">KwaDabeka, South Africa</p>
-                <p className="text-sm">Map View Placeholder</p>
-              </div>
-              {/* In a real app, I'd use an iframe here */}
+            <div className="mt-12 rounded-3xl overflow-hidden h-[400px] border-4 border-gray-100 shadow-xl bg-gray-200 relative group">
               <iframe 
-                title="School Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13568.23456789!2d28.0000!3d-31.6667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQwJzAwLjAiUyAyOMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890"
-                className="w-full h-full border-0 opacity-50"
-                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.23456789!2d30.91234567!3d-29.81234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7af36756851b3%3A0x6734567890abcdef!2s516%20Kululeka%20Dr%2C%20KwaDabeka%2C%203610!5e0!3m2!1sen!2sza!4v1711212345678" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Buhlebemfundo Secondary School Location"
+                className="grayscale hover:grayscale-0 transition-all duration-700"
               ></iframe>
             </div>
           </motion.div>

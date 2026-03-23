@@ -196,9 +196,9 @@ export const setAchieversByYear = (year: string, items: AchieverEntry[]) => setI
 
 // Hall of Fame
 const defaultHall: HallOfFameEntry[] = [
-  { id: '1', name: '[ACHIEVER 1]', title: '7 Distinctions', year: '2025', desc: '', image: 'https://images.unsplash.com/photo-1523240695661-92135f3d325e?q=80&w=2000&auto=format&fit=crop' },
-  { id: '2', name: '[ACHIEVER 2]', title: '6 Distinctions', year: '2025', desc: '', image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2000&auto=format&fit=crop' },
-  { id: '3', name: '[ACHIEVER 3]', title: 'Top in Math', year: '2025', desc: '', image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2000&auto=format&fit=crop' },
+  { id: '1', name: 'BSS Top Achiever 1', title: '7 Distinctions', year: '2025', desc: '', image: '' },
+  { id: '2', name: 'BSS Top Achiever 2', title: '6 Distinctions', year: '2025', desc: '', image: '' },
+  { id: '3', name: 'BSS Top Achiever 3', title: 'Top in Math', year: '2025', desc: '', image: '' },
 ];
 export const getHallOfFame = () => getItems<HallOfFameEntry>('admin_hall_of_fame').length ? getItems<HallOfFameEntry>('admin_hall_of_fame') : defaultHall;
 export const setHallOfFame = (items: HallOfFameEntry[]) => setItems('admin_hall_of_fame', items);
