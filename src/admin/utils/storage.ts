@@ -205,9 +205,41 @@ export const setHallOfFame = (items: HallOfFameEntry[]) => setItems('admin_hall_
 
 // Results by year
 const defaultResults: Record<string, YearResults> = {
-  "2025": { overall: 89.9, bachelor: 206, bachelorRate: 71.8, distinctions: 451, wrote: 287, subjects: [{ subject: "Accounting", rate: 90.6 }, { subject: "Mathematics", rate: 71.1 }, { subject: "Physical Sciences", rate: 82.1 }] },
-  "2024": { overall: 85.4, bachelor: 195, bachelorRate: 68.2, distinctions: 398, wrote: 286, subjects: [{ subject: "Accounting", rate: 88.5 }, { subject: "IsiXhosa HL", rate: 99.1 }] },
-  "2023": { overall: 82.1, bachelor: 178, bachelorRate: 64.5, distinctions: 345, wrote: 276, subjects: [{ subject: "Life Orientation", rate: 100 }, { subject: "Geography", rate: 93.5 }] }
+  "2025": { 
+    overall: 93.4, 
+    bachelor: 112, 
+    bachelorRate: 43.8, 
+    distinctions: 215, 
+    wrote: 256, 
+    subjects: [
+      { subject: "Accounting", rate: 88.5 },
+      { subject: "Business Studies", rate: 94.2 },
+      { subject: "Mathematics", rate: 68.5 },
+      { subject: "Physical Sciences", rate: 75.4 }
+    ] 
+  },
+  "2024": { 
+    overall: 86.5, 
+    bachelor: 105, 
+    bachelorRate: 40.7, 
+    distinctions: 198, 
+    wrote: 258, 
+    subjects: [
+      { subject: "Accounting", rate: 82.1 },
+      { subject: "IsiZulu HL", rate: 100 }
+    ] 
+  },
+  "2023": { 
+    overall: 79.5, 
+    bachelor: 92, 
+    bachelorRate: 32.5, 
+    distinctions: 156, 
+    wrote: 283, 
+    subjects: [
+      { subject: "Life Orientation", rate: 100 },
+      { subject: "Geography", rate: 82.2 }
+    ] 
+  }
 };
 export const getResultsByYear = (year: string) => getObject<YearResults | null>(`admin_results_${year}`, defaultResults[year] || null);
 export const setResultsByYear = (year: string, data: YearResults) => setObject(`admin_results_${year}`, data);

@@ -5,55 +5,55 @@ import { getHallOfFame, getResultsByYear, type HallOfFameEntry, type YearResults
 
 const resultsData = {
   "2025": {
-    overall: 73.4,
-    bachelor: 82,
-    bachelorRate: 32.0,
-    distinctions: 145,
+    overall: 93.4,
+    bachelor: 112,
+    bachelorRate: 43.8,
+    distinctions: 215,
     wrote: 256,
     subjects: [
-      { subject: "Accounting", rate: 76.5 },
-      { subject: "Business Studies", rate: 82.1 },
-      { subject: "Economics", rate: 78.2 },
-      { subject: "English FAL", rate: 94.0 },
-      { subject: "Geography", rate: 81.3 },
-      { subject: "IsiZulu HL", rate: 98.5 },
+      { subject: "Accounting", rate: 88.5 },
+      { subject: "Business Studies", rate: 94.2 },
+      { subject: "Economics", rate: 91.0 },
+      { subject: "English FAL", rate: 100 },
+      { subject: "Geography", rate: 96.4 },
+      { subject: "IsiZulu HL", rate: 100 },
       { subject: "Life Orientation", rate: 100 },
-      { subject: "Life Sciences", rate: 74.2 },
-      { subject: "Mathematics", rate: 52.1 },
-      { subject: "Physical Sciences", rate: 58.4 },
+      { subject: "Life Sciences", rate: 89.2 },
+      { subject: "Mathematics", rate: 68.5 },
+      { subject: "Physical Sciences", rate: 75.4 },
     ]
   },
   "2024": {
-    overall: 79.5,
-    bachelor: 94,
-    bachelorRate: 36.4,
-    distinctions: 168,
+    overall: 86.5,
+    bachelor: 105,
+    bachelorRate: 40.7,
+    distinctions: 198,
     wrote: 258,
     subjects: [
-      { subject: "Accounting", rate: 72.1 },
-      { subject: "Business Studies", rate: 85.0 },
-      { subject: "English FAL", rate: 96.2 },
-      { subject: "IsiZulu HL", rate: 99.0 },
+      { subject: "Accounting", rate: 82.1 },
+      { subject: "Business Studies", rate: 89.0 },
+      { subject: "English FAL", rate: 98.2 },
+      { subject: "IsiZulu HL", rate: 100 },
       { subject: "Life Orientation", rate: 100 },
-      { subject: "Mathematics", rate: 55.4 },
-      { subject: "Physical Sciences", rate: 62.1 },
+      { subject: "Mathematics", rate: 65.4 },
+      { subject: "Physical Sciences", rate: 72.1 },
     ]
   },
   "2023": {
-    overall: 73.5,
-    bachelor: 85,
-    bachelorRate: 30.0,
-    distinctions: 132,
+    overall: 79.5,
+    bachelor: 92,
+    bachelorRate: 32.5,
+    distinctions: 156,
     wrote: 283,
     subjects: [
-      { subject: "Accounting", rate: 68.0 },
-      { subject: "Business Studies", rate: 79.5 },
-      { subject: "Geography", rate: 75.2 },
-      { subject: "IsiZulu HL", rate: 98.0 },
+      { subject: "Accounting", rate: 72.0 },
+      { subject: "Business Studies", rate: 84.5 },
+      { subject: "Geography", rate: 82.2 },
+      { subject: "IsiZulu HL", rate: 99.0 },
       { subject: "Life Orientation", rate: 100 },
-      { subject: "Life Sciences", rate: 70.1 },
-      { subject: "Mathematics", rate: 48.5 },
-      { subject: "Physical Sciences", rate: 54.2 },
+      { subject: "Life Sciences", rate: 78.1 },
+      { subject: "Mathematics", rate: 55.5 },
+      { subject: "Physical Sciences", rate: 61.2 },
     ]
   }
 } as const;
@@ -157,7 +157,7 @@ export const Achievements = () => {
             </div>
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
               <div className="w-40 h-40 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-yellow-900 border-8 border-white shadow-lg shrink-0">
-                <span className="text-4xl font-black">85.8%</span>
+                <span className="text-4xl font-black">93.4%</span>
                 <span className="text-sm font-bold uppercase tracking-tighter italic">Pass Rate</span>
               </div>
               <div>
@@ -165,10 +165,10 @@ export const Achievements = () => {
                   <Star size={16} fill="currentColor" /> Highest Historic Achievement <Star size={16} fill="currentColor" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-black text-school-primary mb-4">
-                  2017: A Year of Historic Excellence
+                  2025: A Year of Historic Excellence
                 </h2>
                 <p className="text-lg text-gray-700 max-w-2xl italic leading-relaxed">
-                  "In 2017, BUHLEBEMFUNDO SECONDARY SCHOOL reached a historic peak, recording a monumental 85.8% pass rate. This achievement remains a testament to the dedication of our students and the excellence of our academic tradition."
+                  "In 2025, BUHLEBEMFUNDO SECONDARY SCHOOL reached a new historic peak, recording a monumental 93.4% pass rate. This achievement remains a testament to the dedication of our students and the excellence of our academic tradition."
                 </p>
               </div>
             </div>
