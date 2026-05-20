@@ -4,63 +4,106 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
 
 export const Footer = () => {
   return (
-    <footer className="bg-school-primary text-white pt-16 pb-8">
+    <footer className="pt-12 pb-8 w-full" style={{ background: '#1E40AF', borderTop: '4px solid #1e3a8a' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-1">
-            <h3 className="text-2xl font-bold mb-6">BUHLEBEMFUNDO</h3>
-            <p className="text-green-100 mb-6 italic">
-              "KNOWLEDGE IS POWER"
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"><Instagram size={20} /></a>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+
+          {/* Col 1 — Logo + Name + Socials */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-12 w-12 shrink-0 rounded-xl overflow-hidden shadow-lg"
+                style={{ background: 'white', border: '2px solid rgba(255,255,255,0.4)' }}>
+                <img src="/Logo/Badge.jpg" alt="Buhlebemfundo logo"
+                  className="h-full w-full object-cover" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold leading-tight text-white">
+                  Buhlebemfundo Secondary School
+                </h3>
+                <p className="text-sm italic mt-0.5" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                  "Knowledge is Power"
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3 mt-4">
+              <a href="#" target="_blank" rel="noreferrer"
+                className="p-2 rounded-full transition-colors"
+                style={{ background: 'rgba(255,255,255,0.12)', color: 'white' }}
+                aria-label="Facebook">
+                <Facebook size={18} />
+              </a>
+              <a href="#" target="_blank" rel="noreferrer"
+                className="p-2 rounded-full transition-colors"
+                style={{ background: 'rgba(255,255,255,0.12)', color: 'white' }}
+                aria-label="Twitter">
+                <Twitter size={18} />
+              </a>
+              <a href="#" target="_blank" rel="noreferrer"
+                className="p-2 rounded-full transition-colors"
+                style={{ background: 'rgba(255,255,255,0.12)', color: 'white' }}
+                aria-label="Instagram">
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
 
+          {/* Col 2 — Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">Contact Us</h4>
-            <ul className="space-y-4 text-green-100">
-              <li className="flex items-start gap-3">
-                <MapPin className="shrink-0 mt-1" size={18} />
+            <h4 className="text-sm font-bold mb-4 pb-2 uppercase tracking-wide"
+              style={{ color: 'white', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+              Contact Us
+            </h4>
+            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <li className="flex items-start gap-2">
+                <MapPin className="shrink-0 mt-0.5" size={16} />
                 <span>516 Kululeka Drive, KwaDabeka, 3610</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} />
+              <li className="flex items-center gap-2">
+                <Phone size={16} className="shrink-0" />
                 <span>031 171 0207</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} />
-                <span>buhlebemfundosec@gmail.com</span>
+              <li className="flex items-start gap-2">
+                <Mail size={16} className="shrink-0 mt-0.5" />
+                <span className="break-all">buhlebemfundosec@gmail.com</span>
               </li>
             </ul>
           </div>
 
+          {/* Col 3 — School Hours */}
           <div>
-            <h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">Quick Links</h4>
-            <ul className="space-y-3 text-green-100">
-              <li><a href="/about" className="hover:text-white transition-colors">About Our School</a></li>
-              <li><a href="/documents" className="hover:text-white transition-colors">Student Portal</a></li>
-              <li><a href="/achievements" className="hover:text-white transition-colors">Hall of Fame</a></li>
-              <li><a href="/admissions" className="hover:text-white transition-colors">Apply Online</a></li>
+            <h4 className="text-sm font-bold mb-4 pb-2 uppercase tracking-wide"
+              style={{ color: 'white', borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+              School Hours
+            </h4>
+            <ul className="space-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <li className="flex justify-between gap-4">
+                <span>Mon – Thu</span>
+                <span className="font-medium">07:30 – 15:30</span>
+              </li>
+              <li className="flex justify-between gap-4">
+                <span>Friday</span>
+                <span className="font-medium">07:30 – 13:30</span>
+              </li>
+              <li className="flex justify-between gap-4">
+                <span>Sat – Sun</span>
+                <span className="font-medium">Closed</span>
+              </li>
             </ul>
           </div>
+        </div>
 
-          <div>
-            <h4 className="text-lg font-bold mb-6 border-b border-white/20 pb-2">School Hours</h4>
-            <ul className="space-y-3 text-green-100">
-              <li className="flex justify-between"><span>Mon - Thu:</span> <span>07:30 - 15:30</span></li>
-              <li className="flex justify-between"><span>Friday:</span> <span>07:30 - 13:30</span></li>
-              <li className="flex justify-between"><span>Sat - Sun:</span> <span>Closed</span></li>
-            </ul>
-          </div>
+        {/* Bottom bar */}
+        <div className="pt-6 text-center text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.45)' }}>
+          <p>© {new Date().getFullYear()} Buhlebemfundo Secondary School. All Rights Reserved.</p>
+          <Link to="/admin/login"
+            className="text-xs mt-2 inline-block transition-colors hover:opacity-80"
+            style={{ color: 'rgba(255,255,255,0.25)' }}>
+            Staff Portal
+          </Link>
         </div>
-        
-        <div className="border-t border-white/10 pt-8 text-center text-green-200 text-sm">
-          <p>© {new Date().getFullYear()} BUHLEBEMFUNDO. All Rights Reserved. | [MOTTO]</p>
-          <Link to="/admin/login" className="text-green-200/30 hover:text-green-200/60 text-xs mt-2 inline-block transition-colors">Staff Portal</Link>
-        </div>
+
       </div>
     </footer>
   );
