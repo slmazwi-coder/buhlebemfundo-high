@@ -18,17 +18,42 @@ export interface DocumentItem {
   uploadDate: string;
 }
 
+export type UploadedFile = {
+  key: string;
+  label: string;
+  fileName: string;
+  mimeType: string;
+  dataUrl: string;
+};
+
+export type SubjectMark = {
+  subject: string;
+  mark: number;
+};
+
 export interface Application {
   id: string;
   firstName: string;
   lastName: string;
   grade: string;
   dob: string;
+  gender?: string;
+  year: string;
+  studentNumber: string;
   guardianName: string;
+  guardianRelationship?: string;
   guardianPhone: string;
   guardianEmail: string;
   address: string;
+  locality: string;
   previousSchool: string;
+  lastGradeCompleted?: string;
+  medicalInfo?: string;
+  applicationType: 'General' | 'Boarding';
+  boardingType?: string;
+  uploads: UploadedFile[];
+  subjectMarks: SubjectMark[];
+  averageMark: number;
   status: 'Pending' | 'Reviewed' | 'Accepted' | 'Rejected';
   submittedDate: string;
 }
@@ -111,6 +136,24 @@ function setObject<T>(key: string, obj: T): void {
 
 export function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+}
+
+function padNumber(num: number, length: number) {
+  return num.toString().padStart(length, '0');
+}
+
+export function generateStudentNumber(year: string): string {
+  const key = `admin_student_counter_${year}`;
+  const current = Number(localStorage.getItem(key) || '0');
+  const next = current + 1;
+  localStorage.setItem(key, String(next));
+  return `${year}-${padNumber(next, 6)}`;
+}
+
+export function calculateAverageMark(subjectMarks: SubjectMark[]): number {
+  if (!subjectMarks || subjectMarks.length === 0) return 0;
+  const total = subjectMarks.reduce((sum, s) => sum + (Number.isFinite(s.mark) ? s.mark : 0), 0);
+  return Math.round((total / subjectMarks.length) * 10) / 10;
 }
 
 // News

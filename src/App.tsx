@@ -4,13 +4,20 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { NewsSection } from './components/NewsSection';
+import { ChatbotWidget } from './components/ChatbotWidget';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Staff } from './pages/Staff';
 import { Documents } from './pages/Documents';
 import { Achievements } from './pages/Achievements';
+import { Sport } from './pages/Sport';
+import { Activities } from './pages/Activities';
 import { ExtraCurricular } from './pages/ExtraCurricular';
 import { Admissions } from './pages/Admissions';
+import { Boarding } from './pages/Boarding';
 import { Contact } from './pages/Contact';
+import { StudentLogin } from './pages/StudentLogin';
+import { StudentPortal } from './pages/StudentPortal';
 
 // Admin imports
 import { AdminLogin } from './admin/AdminLogin';
@@ -24,6 +31,7 @@ import { DocumentsEditor } from './admin/editors/DocumentsEditor';
 import { ExtraCurricularEditor } from './admin/editors/ExtraCurricularEditor';
 import { ApplicationsEditor } from './admin/editors/ApplicationsEditor';
 import { ContactEditor } from './admin/editors/ContactEditor';
+import { StudentDocsEditor } from './admin/editors/StudentDocsEditor';
 
 const HomePage = () => (
   <>
@@ -33,18 +41,34 @@ const HomePage = () => (
   </>
 );
 
+const PageShell = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <Navbar />
+    <main className="flex-grow">{children}</main>
+    <Footer />
+  </>
+);
+
 export default function App() {
   return (
     <Router>
       <Routes>
         {/* Public routes */}
-        <Route path="/" element={<><Navbar /><main className="flex-grow"><HomePage /></main><Footer /></>} />
-        <Route path="/about" element={<><Navbar /><main className="flex-grow"><About /></main><Footer /></>} />
-        <Route path="/documents" element={<><Navbar /><main className="flex-grow"><Documents /></main><Footer /></>} />
-        <Route path="/achievements" element={<><Navbar /><main className="flex-grow"><Achievements /></main><Footer /></>} />
-        <Route path="/extra-curricular" element={<><Navbar /><main className="flex-grow"><ExtraCurricular /></main><Footer /></>} />
-        <Route path="/admissions" element={<><Navbar /><main className="flex-grow"><Admissions /></main><Footer /></>} />
-        <Route path="/contact" element={<><Navbar /><main className="flex-grow"><Contact /></main><Footer /></>} />
+        <Route path="/" element={<PageShell><HomePage /></PageShell>} />
+        <Route path="/about" element={<PageShell><About /></PageShell>} />
+        <Route path="/staff" element={<PageShell><Staff /></PageShell>} />
+        <Route path="/documents" element={<PageShell><Documents /></PageShell>} />
+        <Route path="/achievements" element={<PageShell><Achievements /></PageShell>} />
+        <Route path="/sport" element={<PageShell><Sport /></PageShell>} />
+        <Route path="/activities" element={<PageShell><Activities /></PageShell>} />
+        <Route path="/extra-curricular" element={<PageShell><ExtraCurricular /></PageShell>} />
+        <Route path="/admissions" element={<PageShell><Admissions /></PageShell>} />
+        <Route path="/boarding" element={<PageShell><Boarding /></PageShell>} />
+        <Route path="/contact" element={<PageShell><Contact /></PageShell>} />
+
+        {/* Student portal routes */}
+        <Route path="/student/login" element={<StudentLogin />} />
+        <Route path="/student" element={<StudentPortal />} />
 
         {/* Admin routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
@@ -56,9 +80,12 @@ export default function App() {
           <Route path="documents" element={<DocumentsEditor />} />
           <Route path="extra-curricular" element={<ExtraCurricularEditor />} />
           <Route path="applications" element={<ApplicationsEditor />} />
+          <Route path="student-documents" element={<StudentDocsEditor />} />
           <Route path="contact" element={<ContactEditor />} />
         </Route>
       </Routes>
+
+      <ChatbotWidget />
     </Router>
   );
 }

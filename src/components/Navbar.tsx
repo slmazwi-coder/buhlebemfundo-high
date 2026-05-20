@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Staff', path: '/staff' },
   { name: 'Documents', path: '/documents' },
   { name: 'Achievements', path: '/achievements' },
+  { name: 'Sport', path: '/sport' },
+  { name: 'Activities', path: '/activities' },
   { name: 'Extra-Curricular', path: '/extra-curricular' },
-  { name: 'Admissions', path: '/admissions' },
+  { name: 'General Application', path: '/admissions' },
+  { name: 'Boarding Application', path: '/boarding' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -34,21 +38,32 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                  "px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap",
                   location.pathname === link.path
-                    ? "text-school-primary bg-green-50"
+                    ? "text-school-primary bg-blue-50 font-bold"
                     : "text-gray-600 hover:text-school-primary hover:bg-gray-50"
                 )}
               >
                 {link.name}
               </Link>
             ))}
+            <Link
+              to="/student/login"
+              className={cn(
+                'ml-2 px-4 py-2 rounded-lg text-sm font-bold transition-colors inline-flex items-center gap-2',
+                location.pathname.startsWith('/student')
+                  ? 'text-white bg-school-primary'
+                  : 'text-school-primary border-2 border-school-primary hover:bg-school-primary hover:text-white'
+              )}
+            >
+              <User size={15} /> Student Portal
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -75,13 +90,27 @@ export const Navbar = () => {
                 className={cn(
                   "block px-3 py-2 rounded-md text-base font-medium",
                   location.pathname === link.path
-                    ? "text-school-primary bg-green-50"
+                    ? "text-school-primary bg-blue-50"
                     : "text-gray-600 hover:text-school-primary hover:bg-gray-50"
                 )}
               >
                 {link.name}
               </Link>
             ))}
+            <div className="pt-2 border-t border-gray-200">
+              <Link
+                to="/student/login"
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-2 rounded-md text-base font-bold",
+                  location.pathname.startsWith('/student')
+                    ? 'text-white bg-school-primary'
+                    : 'text-school-primary hover:bg-blue-50'
+                )}
+              >
+                <User size={15} /> Student Portal
+              </Link>
+            </div>
           </div>
         </div>
       )}
